@@ -1,0 +1,15 @@
+inputSet:
+  pipeline:
+    identifier: Build_Golang_CICD_Tutorial_1698261809230
+    properties:
+      ci:
+        codebase:
+          build:
+            spec:
+              branch: main
+            type: branch
+    object Object: properties.ci.codebase
+  name: build
+  identifier: build
+  orgIdentifier: default
+  projectIdentifier: Golandcicdtuto
