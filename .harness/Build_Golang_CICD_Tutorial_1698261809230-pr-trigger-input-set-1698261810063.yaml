@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Golang_CICD_Tutorial_1698261809230-pr-trigger-input-set
+  identifier: Build_Golang_CICD_Tutorial_1698261809230prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Golandcicdtuto
+  pipeline:
+    identifier: Build_Golang_CICD_Tutorial_1698261809230
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
