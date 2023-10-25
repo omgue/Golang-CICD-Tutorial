@@ -18,16 +18,15 @@ pipeline:
           execution:
             steps:
               - step:
-                  identifier: dockerbuild
-                  name: docker_build
+                  type: Run
+                  name: Test Go App
+                  identifier: Test_Go_App
                   spec:
-                    image: plugins/docker
-                    settings:
-                      dry_run: "true"
-                      repo: hello/world
-                      tags: latest
-                  timeout: ""
-                  type: Plugin
+                    shell: Sh
+                    command: |-
+                      go mod init Golang-CICD-Tutorial
+                      go build
+                      go test
           platform:
             arch: Amd64
             os: Linux
